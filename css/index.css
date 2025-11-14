@@ -1,0 +1,576 @@
+/* === Estilos generales === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+/* === Navbar === */
+.navbar {
+  width: 100%;
+  height: 70px;
+  background: #004d40; /* Verde oscuro tipo bosque */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.logo img {
+  width: 45px;
+  margin-right: 10px;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffd54f; /* Amarillo cálido */
+}
+
+/* === Botones === */
+.nav-btns {
+  margin-left: 1rem;
+}
+
+.btn-register {
+  background: linear-gradient(135deg, #ff6b35, #fcbf49);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(252, 191, 73, 0.4);
+}
+
+.btn-register:hover {
+  background: linear-gradient(135deg, #fcbf49, #ff6b35);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(252, 191, 73, 0.6);
+}
+
+.btn-register:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(252, 191, 73, 0.4);
+}
+
+
+/* === Menú móvil === */
+.menu-toggle {
+  display: none;
+  color: #fff;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-btns {
+    display: none;
+  }
+}
+
+.nav-links.show {
+  display: block;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  background: #004d40;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.nav-links.show ul {
+  flex-direction: column;
+  gap: 15px;
+}
+/* =========================================
+   CARRUSEL MULTI-IMAGEN - TURISMO HIDALGO
+   ========================================= */
+.main-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--gris);
+  padding: 50px 0;
+}
+
+.banner-container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.banner-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.banner-item {
+  min-width: calc(33.333% - 20px);
+  background: var(--blanco);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.banner-item:hover {
+  transform: translateY(-5px);
+}
+
+.banner-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.banner-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.banner-info h3 {
+  color: var(--verde);
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.banner-info p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Botones */
+.banner-btn {
+  background-color: var(--verde);
+  color: var(--blanco);
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 2;
+}
+
+.banner-btn:hover {
+  background-color: var(--azul);
+}
+
+.banner-btn.prev { margin-right: 15px; }
+.banner-btn.next { margin-left: 15px; }
+
+/* ----------- RESPONSIVE ----------- */
+@media (max-width: 992px) {
+  .banner-item {
+    min-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .banner-item {
+    min-width: 100%;
+  }
+  .banner-btn {
+    display: none;
+  }
+}
+/* =========================================
+   CALL TO ACTION - TURISMO HIDALGO
+   ========================================= */
+.call-to-action {
+  width: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  ),
+  url("assets/images/hidalgo-banner.jpg") center/cover no-repeat;
+  padding: 80px 20px;
+  color: var(--blanco);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cta-subtitle {
+  display: block;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--verde);
+  margin-bottom: 15px;
+}
+
+.cta-title {
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--verde);
+  color: var(--blanco);
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--azul);
+  transform: scale(1.05);
+}
+
+/* ----------- RESPONSIVE ----------- */
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 1.6rem;
+  }
+
+  .cta-button {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+}
+
+/* ===== BLOG POSTS ===== */
+.blog-posts {
+  padding: 4rem 1rem;
+  background-color: #fff;
+}
+
+.blog-posts .section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #003366; /* Azul principal */
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.post-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.post-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.post-location {
+  display: block;
+  font-weight: 600;
+  color: #2ecc71; /* Verde principal */
+  margin-bottom: 0.5rem;
+}
+
+.post-content h3 {
+  color: #000;
+  font-size: 1.3rem;
+  margin: 0.4rem 0 0.8rem;
+}
+
+.post-info {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+.post-content p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===== Animaciones de aparición ===== */
+.post-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.post-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Reseñas ===== */
+.reviews-section {
+  background-color: #f8f8f8;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.reviews-section h2 {
+  font-size: 2.2rem;
+  color: #007f5f;
+  margin-bottom: 40px;
+}
+
+/* Lista de reseñas */
+.reviews-list {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.review:hover {
+  transform: translateY(-5px);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.review-place {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.review-stars {
+  color: #f5b700;
+  font-size: 1.2rem;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Formulario de reseñas */
+.review-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.review-form-container h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007f5f;
+}
+
+#review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#review-form input,
+#review-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  resize: none;
+  transition: border-color 0.3s;
+}
+
+#review-form input:focus,
+#review-form textarea:focus {
+  border-color: #007f5f;
+  outline: none;
+}
+
+/* Estrellas */
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+}
+
+.stars span {
+  font-size: 1.5rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.stars span.active,
+.stars span:hover,
+.stars span:hover ~ span {
+  color: #f5b700;
+}
+
+/* Botón */
+#review-form button {
+  background-color: #007f5f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+#review-form button:hover {
+  background-color: #005f46;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* ===== Footer ===== */
+.footer {
+  background: linear-gradient(135deg, #007f5f, #003f5c);
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 20px 30px;
+  position: relative;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Redes sociales */
+.social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.social-icons li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-icons li a i {
+  font-size: 1.2rem;
+}
+
+.social-icons li a:hover {
+  color: #f5b700;
+  transform: translateY(-3px);
+}
+
+/* Copyright */
+.copyright p {
+  font-size: 0.9rem;
+  color: #e5e5e5;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .social-icons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

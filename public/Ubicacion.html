@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicacion</title>
+    <link rel="stylesheet" href="../css/ubicacion.css">
+</head>
+<body>
+    <header class="navbar-ubicacion">
+  <div class="logo">
+    <img src="assets/img/logo.png" alt="Logo Turismo Hidalgo">
+    <h1>Turismo Hidalgo</h1>
+  </div>
+  <nav class="nav-links">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="PueblosMagicos.html">Pueblos Mágicos</a></li>
+      <li><a href="Eventos.html">Eventos</a></li>
+      <li><a href="Gastronomia.html">Gastronomía</a></li>
+      <li><a href="Ubicacion.html" class="active">Ubicación</a></li>
+      <li><a href="#footer">Contactos</a></li>
+    </ul>
+  </nav>
+<button class="menu-toggle" id="menu-toggle">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
+</header>
+<main class="ubicacion-container">
+
+  <!-- Sección descriptiva del estado de Hidalgo -->
+  <section class="info-hidalgo">
+    <h2>Explora el Corazón de México: Hidalgo</h2>
+    <p>
+      El estado de <strong>Hidalgo</strong>, ubicado en el centro de México, es un destino lleno de historia,
+      naturaleza y cultura. Con paisajes que van desde las majestuosas montañas de la Sierra Madre Oriental
+      hasta los balnearios de aguas termales en <em>Pachuca</em>, <em>Tula</em> y <em>Ixmiquilpan</em>,
+      Hidalgo ofrece una experiencia única para los viajeros.
+    </p>
+    <p>
+      Reconocido por sus <strong>Pueblos Mágicos</strong> como Real del Monte, Huasca de Ocampo y Mineral del Chico,
+      este estado combina arquitectura colonial, gastronomía tradicional y una calidez humana inigualable.
+    </p>
+  </section>
+
+  <!-- Sección del mapa -->
+  <section class="map-container">
+    <h2>Encuéntranos en Hidalgo</h2>
+    <div class="map-wrapper">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7526116.028204715!2d-103.9063289059682!3d20.4803658815253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fffc7c0b4a3d%3A0x301501e2593d6a0!2sHidalgo!5e0!3m2!1ses!2smx!4v1729199160089!5m2!1ses!2smx"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+</main>
+<section class="galeria-container">
+  <h2>Galería de Anexos Turísticos</h2>
+  <p>Explora imágenes de los municipios y lugares más representativos de Hidalgo.</p>
+
+  <!-- Buscador -->
+  <div class="buscador">
+    <input type="text" id="buscador" placeholder="Buscar por municipio...">
+  </div>
+
+  <!-- Galería -->
+  <div class="galeria-grid" id="galeria">
+    <div class="galeria-item" data-municipio="Real del Monte">
+      <img src="assets/img/realmonte1.jpg" alt="Real del Monte">
+      <div class="info">
+        <h4>Real del Monte</h4>
+        <p>Iglesia principal</p>
+      </div>
+    </div>
+
+    <div class="galeria-item" data-municipio="Huasca de Ocampo">
+      <img src="assets/img/huasca1.jpg" alt="Huasca de Ocampo">
+      <div class="info">
+        <h4>Huasca de Ocampo</h4>
+        <p>Prismas Basálticos</p>
+      </div>
+    </div>
+
+    <div class="galeria-item" data-municipio="Pachuca">
+      <img src="assets/img/pachuca1.jpg" alt="Pachuca">
+      <div class="info">
+        <h4>Pachuca</h4>
+        <p>Reloj Monumental</p>
+      </div>
+    </div>
+
+    <div class="galeria-item" data-municipio="Ixmiquilpan">
+      <img src="assets/img/ixmiquilpan1.jpg" alt="Ixmiquilpan">
+      <div class="info">
+        <h4>Ixmiquilpan</h4>
+        <p>Balnearios naturales</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer-ubicacion" id="footer">
+  <div class="footer-ubicacion-container">
+    
+    <!-- 💬 Contacto directo -->
+    <div class="footer-contacto">
+      <h3>¿Necesitas ayuda?</h3>
+      <p>Escríbenos por WhatsApp y te atenderemos con gusto.</p>
+      <a
+        href="https://api.whatsapp.com/send?phone=5217711234567&text=¡Hola!%20Estoy%20interesado%20en%20Turismo%20Hidalgo%20y%20me%20gustaría%20más%20información."
+        target="_blank"
+        class="whatsapp-btn"
+      >
+        <i class="fab fa-whatsapp"></i> Enviar mensaje
+      </a>
+    </div>
+
+    <!-- 🌐 Redes sociales -->
+    <div class="footer-social">
+      <h3>Síguenos</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+
+    <!-- 📨 Información -->
+    <div class="footer-info">
+      <h3>Contáctanos</h3>
+      <ul>
+        <li><i class="fas fa-envelope"></i> contacto@turismohidalgo.mx</li>
+        <li><i class="fas fa-phone-alt"></i> (01) 771 718 44 89</li>
+        <li><i class="fas fa-map-marker-alt"></i> https://s-turismo.hidalgo.gob.mx/</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Turismo Hidalgo | Todos los derechos reservados</p>
+  </div>
+</footer>
+<script src="../js/ubicacion.js"></script>
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/a2d2c4e4a8.js" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="../css/galeria.css">
+</head>
+<body>
+    <header class="navbar-galeria">
+  <div class="logo">
+    <img src="assets/img/logo.png" alt="Logo Turismo Hidalgo">
+    <h1>Galería</h1>
+  </div>
+
+  <nav class="nav-links">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="PueblosMagicos.html">Pueblos Mágicos</a></li>
+      <li><a href="Galeria.html" class="active">Galería</a></li>
+      <li><a href="Ubicacion.html">Ubicación</a></li>
+      <li><a href="#footer">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <button class="menu-toggle" id="menu-toggle">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+</header>
+<section class="buscador-filtros">
+  <div class="buscador-box">
+    <input type="text" id="buscador" placeholder="Buscar por nombre...">
+    <i class="fas fa-search"></i>
+  </div>
+
+  <div class="filtros-box">
+    <h3>Categorías</h3>
+    <button class="filtro-btn active" data-category="all">Todos</button>
+    <button class="filtro-btn" data-category="iglesia">Iglesias</button>
+    <button class="filtro-btn" data-category="cancha">Canchas</button>
+    <button class="filtro-btn" data-category="restaurante">Restaurantes</button>
+    <button class="filtro-btn" data-category="mirador">Miradores</button>
+    <button class="filtro-btn" data-category="kiosco">Kioscos</button>
+    <button class="filtro-btn" data-category="parque">Parques</button>
+    <button class="filtro-btn" data-category="camino">Caminos / Callejones</button>
+  </div>
+</section>
+
+<script src="../js/galeria.js"></script>
+
+</body>
+</html>
