@@ -30,11 +30,25 @@
   </button>
 </header>
 <section class="buscador-filtros">
+
+  <!-- 🔍 Buscador -->
   <div class="buscador-box">
     <input type="text" id="buscador" placeholder="Buscar por nombre...">
     <i class="fas fa-search"></i>
   </div>
 
+  <!-- 🏷️ Etiquetas tipo Mercado Libre -->
+  <div class="tag-filters">
+    <span class="tag" data-tag="interior">Interior</span>
+    <span class="tag" data-tag="exterior">Exterior</span>
+    <span class="tag" data-tag="dia">De día</span>
+    <span class="tag" data-tag="noche">De noche</span>
+    <span class="tag" data-tag="panoramica">Panorámica</span>
+    <span class="tag" data-tag="antiguo">Antiguo</span>
+    <span class="tag" data-tag="moderno">Moderno</span>
+  </div>
+
+  <!-- 📂 Categorías existentes -->
   <div class="filtros-box">
     <h3>Categorías</h3>
     <button class="filtro-btn active" data-category="all">Todos</button>
@@ -46,7 +60,69 @@
     <button class="filtro-btn" data-category="parque">Parques</button>
     <button class="filtro-btn" data-category="camino">Caminos / Callejones</button>
   </div>
+
 </section>
+
+
+<section class="galeria-container">
+
+  <div class="galeria-item"
+       data-name="Iglesia San Miguel"
+       data-category="iglesia">
+    <img src="galeria/iglesia1.jpg" alt="">
+    <span class="galeria-titulo">Iglesia San Miguel</span>
+  </div>
+
+  <div class="galeria-item"
+       data-name="Cancha Municipal"
+       data-category="cancha">
+    <img src="galeria/cancha1.jpg" alt="">
+    <span class="galeria-titulo">Cancha Municipal</span>
+  </div>
+
+  <div class="galeria-item"
+       data-name="Restaurante El Fogón"
+       data-category="restaurante">
+    <img src="galeria/restaurante1.jpg" alt="">
+    <span class="galeria-titulo">Restaurante El Fogón</span>
+  </div>
+
+  <div class="galeria-item"
+       data-name="Mirador La Loma"
+       data-category="mirador">
+    <img src="galeria/mirador1.jpg" alt="">
+    <span class="galeria-titulo">Mirador La Loma</span>
+  </div>
+
+  <div class="galeria-item"
+       data-name="Kiosco Central"
+       data-category="kiosco">
+    <img src="galeria/kiosco1.jpg" alt="">
+    <span class="galeria-titulo">Kiosco Central</span>
+  </div>
+
+  <div class="galeria-item"
+       data-name="Parque Infantil"
+       data-category="parque">
+    <img src="galeria/parque1.jpg" alt="">
+    <span class="galeria-titulo">Parque Infantil</span>
+  </div>
+
+  <div class="galeria-item"
+       data-name="Callejón del Sol"
+       data-category="camino">
+    <img src="galeria/camino1.jpg" alt="">
+    <span class="galeria-titulo">Callejón del Sol</span>
+  </div>
+
+</section>
+
+<!-- Modal para ver imagen en grande -->
+<div id="modal-galeria" class="modal-galeria">
+  <span class="cerrar-modal">&times;</span>
+  <img class="modal-img" id="modal-img" src="">
+  <p class="modal-texto" id="modal-texto"></p>
+</div>
 
 <script src="../js/galeria.js"></script>
 

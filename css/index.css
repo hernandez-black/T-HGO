@@ -36,6 +36,10 @@ body {
   margin-right: 10px;
 }
 
+h1{
+  color: #11cfb0;
+}
+
 .nav-links ul {
   list-style: none;
   display: flex;
@@ -60,7 +64,7 @@ body {
 }
 
 .btn-register {
-  background: linear-gradient(135deg, #ff6b35, #fcbf49);
+  background: linear-gradient(135deg, #35ff57, #339b0a);
   color: #fff;
   border: none;
   border-radius: 30px;
@@ -225,12 +229,11 @@ body {
 .call-to-action {
   width: 100%;
   background: linear-gradient(
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.6)
+    rgba(5, 211, 5, 0.6),
+    rgba(27, 99, 48, 0.6)
   ),
   url("assets/images/hidalgo-banner.jpg") center/cover no-repeat;
   padding: 80px 20px;
-  color: var(--blanco);
   text-align: center;
   display: flex;
   justify-content: center;
@@ -247,7 +250,6 @@ body {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--verde);
   margin-bottom: 15px;
 }
 
@@ -260,17 +262,22 @@ body {
 
 .cta-button {
   display: inline-block;
-  background-color: var(--verde);
-  color: var(--blanco);
+  background-color: #339b0a;
   padding: 12px 30px;
   border-radius: 30px;
   font-size: 1.1rem;
   text-decoration: none;
   transition: all 0.3s ease;
 }
+a{
+  color: #ffffff;
+}
+a:hover{
+  color: #ffff;
+}
 
 .cta-button:hover {
-  background-color: var(--azul);
+  background-color: #199c08;
   transform: scale(1.05);
 }
 
@@ -295,7 +302,7 @@ body {
 .blog-posts .section-title {
   text-align: center;
   font-size: 2rem;
-  color: #003366; /* Azul principal */
+  color: #093b07; /* Azul principal */
   margin-bottom: 2.5rem;
   font-weight: 700;
 }
@@ -307,7 +314,7 @@ body {
 }
 
 .post-card {
-  background: #f9f9f9;
+  background: #cdd8cd;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
@@ -333,12 +340,12 @@ body {
 .post-location {
   display: block;
   font-weight: 600;
-  color: #2ecc71; /* Verde principal */
+  color: #14af55; /* Verde principal */
   margin-bottom: 0.5rem;
 }
 
 .post-content h3 {
-  color: #000;
+  color: #069901;
   font-size: 1.3rem;
   margin: 0.4rem 0 0.8rem;
 }
@@ -355,7 +362,7 @@ body {
 }
 
 .post-content p {
-  color: #333;
+  color: #1d1818;
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -555,7 +562,7 @@ body {
 }
 
 .social-icons li a:hover {
-  color: #f5b700;
+  color: #00f54a;
   transform: translateY(-3px);
 }
 

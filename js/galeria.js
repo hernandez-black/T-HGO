@@ -59,3 +59,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const modal = document.getElementById("modal-galeria");
+  const modalImg = document.getElementById("modal-img");
+  const modalTexto = document.getElementById("modal-texto");
+  const cerrar = document.querySelector(".cerrar-modal");
+
+  document.querySelectorAll(".galeria-item").forEach(item => {
+    item.addEventListener("click", () => {
+      const imgSrc = item.querySelector("img").src;
+      const titulo = item.dataset.name;
+
+      modal.style.display = "block";
+      modalImg.src = imgSrc;
+      modalTexto.textContent = titulo;
+    });
+  });
+
+  cerrar.addEventListener("click", () => modal.style.display = "none");
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  });
+
+});
+
+document.querySelectorAll(".tag").forEach(tag => {
+  tag.addEventListener("click", () => {
+    tag.classList.toggle("active");
+  });
+});

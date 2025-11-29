@@ -33,7 +33,7 @@
 }
 
 .logo h1 {
-  color: #070707;
+  color: #ffffff;
   font-size: 1.3rem;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -61,7 +61,7 @@
   height: 2px;
   bottom: -3px;
   left: 0;
-  background-color: #eefafd;
+  background-color: #ff0000;
   transition: width 0.3s ease;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .nav-links .active {
-  color: #001aff;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
