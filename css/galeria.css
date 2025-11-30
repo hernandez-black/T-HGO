@@ -10,7 +10,7 @@
 
   padding: 15px 60px;
 
-  background: linear-gradient(to left, #01cce7 40%, #66f3fd);
+  background: linear-gradient(to left, #028799 40%, #66f3fd);
   backdrop-filter: blur(12px);
 
   border-bottom: 1px solid rgb(3, 205, 255);
@@ -54,8 +54,8 @@
   font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #ffffff;
-  text-shadow: 0 0 8px rgba(255,255,255,0.3);
+  color: #000000;
+  text-shadow: 0 0 8px rgb(11, 7, 255);
 }
 
 /* Links */
@@ -85,14 +85,14 @@
   bottom: -3px;
   width: 0%;
   height: 2px;
-  background: #ffd27f;
+  background: #004696;
   border-radius: 2px;
 
   transition: width 0.3s ease;
 }
 
 .navbar-galeria .nav-links a:hover {
-  color: #ffd27f;
+  color: #ffffff;
 }
 
 .navbar-galeria .nav-links a:hover::after,
@@ -171,7 +171,7 @@
   align-items: flex-start;
   padding: 25px 60px;
   gap: 30px;
-  background: rgba(255,255,255,0.05);
+  background: rgb(255, 255, 255);
   backdrop-filter: blur(10px);
   border-radius: 15px;
   margin: 30px auto;
@@ -184,12 +184,12 @@
 }
 
 .buscador-box input {
-  width: 100%;
+  width: 90%;
   padding: 12px 45px 12px 15px;
   font-size: 1rem;
   border-radius: 10px;
   outline: none;
-  border: 2px solid rgba(255,255,255,0.2);
+  border: 2px solid rgb(10, 230, 238);
   background: rgba(255,255,255,0.15);
   color: #09a4ca;
   backdrop-filter: blur(5px);
@@ -197,7 +197,7 @@
 }
 
 .buscador-box input:focus {
-  border-color: #ffcc66;
+  border-color: #08805c;
 }
 
 .buscador-box i {
@@ -206,7 +206,7 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.2rem;
-  color: #1f1f1f;
+  color: #ff0101;
 }
 
 /* Filtros */
@@ -239,7 +239,7 @@
 }
 
 .filtro-btn.active {
-  background: #ffcc66;
+  background: #00ffdd;
   color: #000;
   font-weight: 600;
 }
@@ -272,7 +272,7 @@
 .tag {
   padding: 6px 14px;
   border-radius: 18px;
-  background: #e70101;
+  background: #01dfe7;
   border: 1px solid #ccc;
   font-size: 0.9rem;
   cursor: pointer;
@@ -280,12 +280,12 @@
 }
 
 .tag:hover {
-  background: #eb7b7b;
+  background: #7bebe6;
 }
 
 .tag.active {
   background: #0099ff;
-  color: rgb(216, 15, 15);
+  color: rgb(255, 255, 255);
   border-color: #0099ff;
   box-shadow: 0px 0px 6px rgba(0, 153, 255, 0.4);
 }
@@ -294,7 +294,7 @@
 /* ====== GALERÍA ====== */
 
 .galeria-container {
-  width: 100%;
+  width: 90%;
   padding: 40px 60px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -331,11 +331,11 @@
   left: 0;
   width: 100%;
   padding: 10px;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  background: linear-gradient(to top, rgba(7, 205, 255, 0.829), transparent);
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
-  text-shadow: 1px 2px 5px #000;
+  text-shadow: 1px 2px 5px #080808;
   border-radius: 0 0 15px 15px;
 }
 
@@ -350,7 +350,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.85);
+  background: rgba(223, 236, 238, 0.85);
   backdrop-filter: blur(4px);
   text-align: center;
 }
@@ -391,5 +391,71 @@
 
   .modal-img {
     width: 95%;
+  }
+}
+
+/* ===== FOOTER GALERÍA ===== */
+.footer-galeria {
+  width: 97%;
+  background: #a7d3f0; /* 🔵 Azul bajito global */
+  padding: 35px 20px;
+  border-top: 2px solid #ffffff; /* Borde blanco */
+  margin-top: 50px;
+}
+
+.footer-contenido {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  color: #000000; /* Letras negras */
+}
+
+.footer-contenido h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.footer-contenido p {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+}
+
+.footer-links {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: 0.3s ease;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.footer-links a:hover {
+  border-color: #fff; /* Subrayado blanco al pasar */
+}
+
+.footer-copy {
+  display: block;
+  margin-top: 18px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .footer-contenido h3 {
+    font-size: 1.3rem;
+  }
+  .footer-links {
+    gap: 10px;
   }
 }
