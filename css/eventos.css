@@ -1,10 +1,14 @@
+body{
+  background-color: #e0b5aa;
+}
+
 /* ===== HEADER ===== */
 .header-eventos-alt {
   position: sticky;
   top: 0;
   z-index: 1000;
   background: linear-gradient(90deg, #ff7e5f, #feb47b);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px rgba(1, 243, 223, 0.952);
   backdrop-filter: blur(5px);
 }
 
@@ -34,7 +38,7 @@
 }
 
 .navbar-logo-alt span {
-  color: #ffd700;
+  color: #0ad8c7;
   font-style: normal;
 }
 
@@ -47,7 +51,7 @@
 }
 
 .navbar-menu-alt li a {
-  color: #fff;
+  color: #020202;
   text-decoration: none;
   font-weight: 600;
   padding: 5px 0;
@@ -62,7 +66,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background: #ffd700;
+  background: #0059ff;
   transition: width 0.3s ease;
 }
 
@@ -72,7 +76,7 @@
 }
 
 .navbar-menu-alt li a:hover {
-  color: #ffd700;
+  color: #00ffea;
 }
 
 /* ===== HAMBURGUESA ===== */
@@ -150,7 +154,7 @@
   position: relative;
   width: 100%;
   background: linear-gradient(
-      rgba(32, 48, 79, 0.7),
+      rgb(5, 71, 204),
       rgba(32, 48, 79, 0.7)
     ),
     url("https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80");
@@ -171,7 +175,7 @@
 /* ===== TEXTO ===== */
 .text-content-alt h4 {
   font-size: 1.2rem;
-  color: #ffd700;
+  color: #ffae00;
   letter-spacing: 2px;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -272,10 +276,10 @@
 /* Contenido */
 .evento-content {
   flex: 1;
-  background: #fff;
+  background: #ff7e5f;
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 20px rgb(236, 143, 143);
   position: relative;
   transition: all 0.4s ease;
 }
@@ -317,12 +321,12 @@
 /* Títulos y textos */
 .evento-content h3 {
   font-size: 24px;
-  color: #222;
+  color: #2606b6;
   margin-bottom: 15px;
 }
 
 .evento-content p {
-  color: #555;
+  color: #000000;
   line-height: 1.6;
   font-size: 16px;
 }
@@ -428,13 +432,13 @@
 
 /* ===== COPYRIGHT ===== */
 .footer-eventos .copyright-text {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(233, 164, 164, 0.918);
   padding-top: 20px;
 }
 
 .footer-eventos .copyright-text p {
   margin: 0;
-  color: #aaa;
+  color: #fffefe;
   font-size: 14px;
   letter-spacing: 0.5px;
 }

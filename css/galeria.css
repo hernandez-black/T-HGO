@@ -10,10 +10,10 @@
 
   padding: 15px 60px;
 
-  background: rgba(25, 40, 60, 0.55);
+  background: linear-gradient(to left, #01cce7 40%, #66f3fd);
   backdrop-filter: blur(12px);
 
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgb(3, 205, 255);
 
   animation: navbar-fade 0.8s ease forwards;
 }

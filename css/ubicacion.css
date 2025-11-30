@@ -3,7 +3,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: linear-gradient(90deg, #1e2a38, #2e4d67);
+  background: linear-gradient(90deg, #c004ff, #3d0149);
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -30,7 +30,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #f7f7f7;
+  color: #ffffff;
 }
 
 .navbar-ubicacion .nav-links ul {
@@ -50,14 +50,14 @@
 }
 
 .navbar-ubicacion .nav-links a:hover {
-  color: #ffcc66;
-  border-bottom: 2px solid #ffcc66;
+  color: #ff00f2;
+  border-bottom: 2px solid #fd3eb4;
   padding-bottom: 3px;
 }
 
 .navbar-ubicacion .nav-links a.active {
-  color: #ffcc66;
-  border-bottom: 2px solid #ffcc66;
+  color: #66fff7;
+  border-bottom: 2px solid #66ffde;
 }
 
 .menu-toggle {
@@ -129,7 +129,7 @@
 /* ====== CONTENEDOR GENERAL ====== */
 .ubicacion-container {
   padding: 60px 10%;
-  background: #f4f6f8;
+  background: #ffffff;
   color: #1e2a38;
   font-family: "Poppins", sans-serif;
 }
@@ -151,7 +151,7 @@
 
 .info-hidalgo h2 {
   font-size: 2rem;
-  color: #27496d;
+  color: #6d2769;
   margin-bottom: 20px;
 }
 
@@ -159,23 +159,23 @@
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 15px;
-  color: #444;
+  color: #9671a5;
 }
 
 /* ====== MAPA ====== */
 .map-container {
   text-align: center;
   padding: 40px;
-  background: linear-gradient(135deg, #2e4d67, #203447);
+  background: linear-gradient(135deg, #622e67, #ac02ac);
   color: white;
   border-radius: 20px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 5px 25px rgb(245, 5, 225);
 }
 
 .map-container h2 {
   font-size: 1.8rem;
   margin-bottom: 25px;
-  color: #ffcc66;
+  color: #ddeff5;
 }
 
 .map-wrapper {
@@ -210,19 +210,19 @@
 
 .galeria-container {
   padding: 60px 10%;
-  background: #f9f9fb;
+  background: #fbf9fb;
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
 
 .galeria-container h2 {
   font-size: 2rem;
-  color: #2a4d69;
+  color: #692a66;
   margin-bottom: 10px;
 }
 
 .galeria-container p {
-  color: #555;
+  color: #cf0fbf;
   margin-bottom: 30px;
 }
 
@@ -238,7 +238,7 @@
 }
 
 .buscador input:focus {
-  border-color: #2a4d69;
+  border-color: #4d2b52;
   box-shadow: 0 0 10px rgba(42,77,105,0.3);
 }
 
@@ -254,7 +254,7 @@
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgb(116, 9, 107);
   transition: transform 0.3s ease;
   cursor: pointer;
 }
@@ -297,7 +297,7 @@
 }
 
 .footer-ubicacion {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #220f27, #9c0b90, #82098d);
   color: #fff;
   padding: 60px 0 25px;
   font-family: "Poppins", sans-serif;
@@ -313,10 +313,10 @@
 }
 
 .footer-ubicacion h3 {
-  color: #25d366;
+  color: #ffffff;
   margin-bottom: 15px;
   font-size: 1.3rem;
-  border-left: 4px solid #25d366;
+  border-left: 4px solid #25aad3;
   padding-left: 10px;
 }
 
@@ -329,7 +329,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background-color: #25d366;
+  background-color: #25bfd3;
   color: #fff;
   padding: 12px 20px;
   border-radius: 50px;
@@ -344,7 +344,7 @@
 }
 
 .whatsapp-btn:hover {
-  background-color: #1ebd58;
+  background-color: #0a817b;
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
 }
@@ -355,7 +355,7 @@
 }
 
 .footer-social a {
-  background: #25d366;
+  background: #25d3ca;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -368,8 +368,8 @@
 }
 
 .footer-social a:hover {
-  background: #fff;
-  color: #25d366;
+  background: #a705ad;
+  color: #25d3b6;
   transform: translateY(-3px);
 }
 
@@ -380,7 +380,7 @@
 }
 
 .footer-info i {
-  color: #25d366;
+  color: #25d3ca;
   margin-right: 8px;
 }
 
@@ -390,7 +390,7 @@
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 10px;
   font-size: 0.9rem;
-  color: #ccc;
+  color: #cccccc;
 }
 
 @media (max-width: 768px) {
