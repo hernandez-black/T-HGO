@@ -164,44 +164,55 @@
   }
 }
 
-.tour-virtual {
-  max-width: 900px;
-  margin: 40px auto;
+.videos-hidalgo {
+  max-width: 1000px;
+  margin: 50px auto;
   padding: 20px;
   text-align: center;
   font-family: Arial, sans-serif;
 }
 
-.tour-title {
-  font-size: 32px;
-  margin-bottom: 10px;
+.videos-hidalgo h2 {
+  font-size: 2rem;
   color: #0d3b66;
-}
-
-.tour-description {
-  font-size: 18px;
-  color: #444;
   margin-bottom: 25px;
 }
 
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 */
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+.videos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
 }
 
-.video-wrapper iframe {
-  position: absolute;
-  top: 0; left: 0;
+.video-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-card iframe {
   width: 100%;
-  height: 100%;
+  height: 200px;
   border: none;
 }
 
+.video-card h3 {
+  margin: 15px 10px 5px;
+  font-size: 1.2rem;
+  color: #23344A;
+}
+
+.video-card p {
+  margin: 0 10px 15px;
+  font-size: 0.95rem;
+  color: #444;
+}
 
 
 /* ===== FOOTER GALERÍA ===== */

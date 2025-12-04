@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria</title>
     <link rel="stylesheet" href="../css/galeria.css">
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/photo-sphere-viewer/dist/photo-sphere-viewer.css"
+/>
 </head>
 <body>
     <header class="navbar-galeria">
@@ -30,26 +34,19 @@
   </button>
 </header>
 <!-- Galería -->
-<section class="tour-virtual">
-
-  <h2 class="tour-title">Tour Virtual 360° — Pachuca / Hidalgo</h2>
-
-  <p class="tour-description">
-    Disfruta una vista inmersiva de Pachuca, Hidalgo. Usa tu mouse o dedo para explorar el entorno en 360°.
-  </p>
-
-  <!-- VIDEO 360 estilizado -->
-  <div class="video-wrapper">
-    <iframe 
-      src="https://www.youtube.com/embed/gZ429DHJugE?controls=0&modestbranding=1&showinfo=0&rel=0"
-      frameborder="0"
-      allowfullscreen
-      loading="lazy">
-    </iframe>
+<section class="videos-hidalgo">
+  <h2>Turismo en Hidalgo — Videos recomendados</h2>
+  <div class="videos-container">
+    <!-- Video de Esen Alva sobre Hidalgo / Pachuca -->
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/a4bz7hTyivE" frameborder="0"
+        allowfullscreen loading="lazy"></iframe>
+      <h3>Turismo en Hidalgo – Video de Esen Alva</h3>
+      <p>Recorrido y puntos turísticos del estado de Hidalgo mostrados por Esen Alva.</p>
+    </div>
   </div>
 </section>
-
-
+<div id="viewer-360" style="width: 100%; height: 500px;">Imagen</div>
 
 <footer class="footer-galeria">
   <div class="footer-contenido">
@@ -68,6 +65,17 @@
     </span>
   </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>
+
+<script>
+  const viewer = new PhotoSphereViewer.Viewer({
+    container: document.getElementById('viewer-360'),
+    panorama: '../assets/nueva_carpeta/StreetView360.jpg',
+  });
+</script>
+
 
 
 <script src="../js/galeria.js"></script>
