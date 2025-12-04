@@ -3,13 +3,13 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: linear-gradient(90deg, #c004ff, #3d0149);
-  color: #fff;
+  background: linear-gradient(90deg, #23344A, #395775);
+  color: #FDFDFE;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 60px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 10px rgba(22, 32, 47, 0.35);
   transition: background 0.3s ease;
 }
 
@@ -30,7 +30,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #ffffff;
+  color: #FDFDFE;
 }
 
 .navbar-ubicacion .nav-links ul {
@@ -43,21 +43,21 @@
 
 .navbar-ubicacion .nav-links a {
   text-decoration: none;
-  color: #e4e4e4;
+  color: #E0E0E0;
   font-weight: 500;
   font-size: 1rem;
   transition: color 0.3s, border-bottom 0.3s;
 }
 
 .navbar-ubicacion .nav-links a:hover {
-  color: #ff00f2;
-  border-bottom: 2px solid #fd3eb4;
+  color: #D7C9B8;
+  border-bottom: 2px solid #D7C9B8;
   padding-bottom: 3px;
 }
 
 .navbar-ubicacion .nav-links a.active {
-  color: #66fff7;
-  border-bottom: 2px solid #66ffde;
+  color: #FDFDFE;
+  border-bottom: 2px solid #FDFDFE;
 }
 
 .menu-toggle {
@@ -65,16 +65,17 @@
   font-size: 1.8rem;
   cursor: pointer;
 }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
 
   .nav-links ul {
-    display: flex;               /* ← YA NO display:none */
+    display: flex;
     flex-direction: column;
     position: absolute;
     top: 65px;
     right: 0;
-    background: rgba(46, 77, 103, 0.95);
+    background: rgba(35, 52, 74, 0.95);
     width: 100%;
     height: 220px;
     align-items: center;
@@ -82,16 +83,16 @@
     padding: 2rem 0;
     transform: translateY(-100%);
     opacity: 0;
-    pointer-events: none;        /* ← evita clics cuando está cerrado */
+    pointer-events: none;
     transition: transform 0.3s ease, opacity 0.3s ease;
     border-radius: 0 0 15px 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(22, 32, 47, 0.4);
   }
 
   .nav-links ul.active {
     transform: translateY(0);
     opacity: 1;
-    pointer-events: auto;        /* ← ahora sí clickeable */
+    pointer-events: auto;
   }
 
   .menu-toggle {
@@ -108,7 +109,7 @@
   .menu-toggle .bar {
     height: 3px;
     width: 100%;
-    background-color: #fff;
+    background-color: #FDFDFE;
     border-radius: 5px;
     transition: all 0.3s ease;
   }
@@ -129,7 +130,7 @@
 /* ====== CONTENEDOR GENERAL ====== */
 .ubicacion-container {
   padding: 60px 10%;
-  background: #ffffff;
+  background: #FDFCFB;
   color: #1e2a38;
   font-family: "Poppins", sans-serif;
 }
@@ -138,10 +139,10 @@
 .info-hidalgo {
   text-align: center;
   margin-bottom: 60px;
-  background: #ffffff;
+  background: #FFFFFF;
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 20px rgba(35, 52, 74, 0.15);
   transition: transform 0.3s ease;
 }
 
@@ -151,7 +152,7 @@
 
 .info-hidalgo h2 {
   font-size: 2rem;
-  color: #6d2769;
+  color: #23344A;
   margin-bottom: 20px;
 }
 
@@ -159,23 +160,23 @@
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 15px;
-  color: #9671a5;
+  color: #555;
 }
 
 /* ====== MAPA ====== */
 .map-container {
   text-align: center;
   padding: 40px;
-  background: linear-gradient(135deg, #622e67, #ac02ac);
-  color: white;
+  background: linear-gradient(135deg, #23344A, #395775);
+  color: #fff;
   border-radius: 20px;
-  box-shadow: 0 5px 25px rgb(245, 5, 225);
+  box-shadow: 0 5px 25px rgba(35, 52, 74, 0.35);
 }
 
 .map-container h2 {
   font-size: 1.8rem;
   margin-bottom: 25px;
-  color: #ddeff5;
+  color: #D7C9B8;
 }
 
 .map-wrapper {
@@ -207,22 +208,22 @@
   }
 }
 
-
+/* ===== GALERÍA ===== */
 .galeria-container {
   padding: 60px 10%;
-  background: #fbf9fb;
+  background: #F3F0EB;
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
 
 .galeria-container h2 {
   font-size: 2rem;
-  color: #692a66;
+  color: #23344A;
   margin-bottom: 10px;
 }
 
 .galeria-container p {
-  color: #cf0fbf;
+  color: #395775;
   margin-bottom: 30px;
 }
 
@@ -231,15 +232,17 @@
   width: 60%;
   max-width: 500px;
   padding: 12px 15px;
-  border: 2px solid #ccc;
+  border: 2px solid #CCC;
   border-radius: 25px;
   outline: none;
   transition: all 0.3s ease;
+  background: #FFFFFF;
+  color: #23344A;
 }
 
 .buscador input:focus {
-  border-color: #4d2b52;
-  box-shadow: 0 0 10px rgba(42,77,105,0.3);
+  border-color: #395775;
+  box-shadow: 0 0 10px rgba(57,87,117,0.3);
 }
 
 /* Galería */
@@ -254,7 +257,7 @@
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgb(116, 9, 107);
+  box-shadow: 0 5px 15px rgba(35,52,74,0.25);
   transition: transform 0.3s ease;
   cursor: pointer;
 }
@@ -270,7 +273,7 @@
 }
 
 .galeria-item .info {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.55);
   color: white;
   position: absolute;
   bottom: 0;
@@ -296,8 +299,9 @@
   }
 }
 
+/* ===== FOOTER UBICACION ===== */
 .footer-ubicacion {
-  background: linear-gradient(135deg, #220f27, #9c0b90, #82098d);
+  background: linear-gradient(135deg, #23344A, #395775);
   color: #fff;
   padding: 60px 0 25px;
   font-family: "Poppins", sans-serif;
@@ -316,7 +320,7 @@
   color: #ffffff;
   margin-bottom: 15px;
   font-size: 1.3rem;
-  border-left: 4px solid #25aad3;
+  border-left: 4px solid #D7C9B8;
   padding-left: 10px;
 }
 
@@ -329,7 +333,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background-color: #25bfd3;
+  background-color: #395775;
   color: #fff;
   padding: 12px 20px;
   border-radius: 50px;
@@ -344,9 +348,9 @@
 }
 
 .whatsapp-btn:hover {
-  background-color: #0a817b;
+  background-color: #23344A;
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 4px 12px rgba(35,52,74,0.35);
 }
 
 .footer-social .social-icons {
@@ -355,7 +359,7 @@
 }
 
 .footer-social a {
-  background: #25d3ca;
+  background: #395775;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -368,8 +372,8 @@
 }
 
 .footer-social a:hover {
-  background: #a705ad;
-  color: #25d3b6;
+  background: #D7C9B8;
+  color: #23344A;
   transform: translateY(-3px);
 }
 
@@ -380,7 +384,7 @@
 }
 
 .footer-info i {
-  color: #25d3ca;
+  color: #D7C9B8;
   margin-right: 8px;
 }
 

@@ -7,14 +7,14 @@
 }
 
 body {
-  background: #f5f5f5;
+  background: #F3F0EB;
 }
 
 /* === Navbar === */
 .navbar {
   width: 100%;
   height: 70px;
-  background: #004d40;
+  background: linear-gradient(90deg, #23344A, #395775);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,7 +28,7 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: #FDFDFE;
 }
 
 .logo img {
@@ -36,8 +36,8 @@ body {
   margin-right: 10px;
 }
 
-h1{
-  color: #11cfb0;
+h1 {
+  color: #D7C9B8; /* acento nude */
 }
 
 .nav-links ul {
@@ -47,7 +47,7 @@ h1{
 }
 
 .nav-links a {
-  color: #fff;
+  color: #FDFDFE;
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
@@ -55,7 +55,7 @@ h1{
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #00f1dd; /* Amarillo cálido */
+  color: #D7C9B8;
 }
 
 /* === Botones === */
@@ -64,8 +64,8 @@ h1{
 }
 
 .btn-register {
-  background: linear-gradient(135deg, #35ff57, #339b0a);
-  color: #fff;
+  background: linear-gradient(135deg, #395775, #23344A);
+  color: #FDFCFB;
   border: none;
   border-radius: 30px;
   padding: 10px 22px;
@@ -74,25 +74,25 @@ h1{
   letter-spacing: 0.5px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(252, 191, 73, 0.4);
+  box-shadow: 0 4px 10px rgba(35, 52, 74, 0.4);
 }
 
 .btn-register:hover {
-  background: linear-gradient(135deg, #09e65d, #018823);
+  background: linear-gradient(135deg, #23344A, #395775);
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(64, 255, 198, 0.6);
+  box-shadow: 0 6px 15px rgba(35, 52, 74, 0.6);
 }
 
 .btn-register:active {
   transform: scale(0.97);
-  box-shadow: 0 2px 6px rgba(252, 191, 73, 0.4);
+  box-shadow: 0 2px 6px rgba(35, 52, 74, 0.4);
 }
 
 
 /* === Menú móvil === */
 .menu-toggle {
   display: none;
-  color: #fff;
+  color: #FDFDFE;
   font-size: 1.8em;
   cursor: pointer;
 }
@@ -117,7 +117,7 @@ h1{
   position: absolute;
   top: 70px;
   left: 0;
-  background: #004d40;
+  background: linear-gradient(180deg, #23344A, #395775);
   width: 100%;
   text-align: center;
   padding: 20px 0;
@@ -127,6 +127,7 @@ h1{
   flex-direction: column;
   gap: 15px;
 }
+
 /* =========================================
    CARRUSEL MULTI-IMAGEN - TURISMO HIDALGO
    ========================================= */
@@ -134,7 +135,7 @@ h1{
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: var(--gris);
+  background: #F3F0EB;
   padding: 50px 0;
 }
 
@@ -154,10 +155,10 @@ h1{
 
 .banner-item {
   min-width: calc(33.333% - 20px);
-  background: var(--blanco);
+  background: #FDFCFB;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(35, 52, 74, 0.15);
   transition: transform 0.3s ease;
 }
 
@@ -177,7 +178,7 @@ h1{
 }
 
 .banner-info h3 {
-  color: var(--verde);
+  color: #395775;
   font-size: 1.4rem;
   margin-bottom: 5px;
 }
@@ -189,8 +190,8 @@ h1{
 
 /* Botones */
 .banner-btn {
-  background-color: var(--verde);
-  color: var(--blanco);
+  background-color: #395775;
+  color: #FDFCFB;
   border: none;
   border-radius: 50%;
   font-size: 2rem;
@@ -202,7 +203,7 @@ h1{
 }
 
 .banner-btn:hover {
-  background-color: var(--azul);
+  background-color: #23344A;
 }
 
 .banner-btn.prev { margin-right: 15px; }
@@ -223,14 +224,15 @@ h1{
     display: none;
   }
 }
+
 /* =========================================
    CALL TO ACTION - TURISMO HIDALGO
    ========================================= */
 .call-to-action {
   width: 100%;
   background: linear-gradient(
-    rgba(5, 211, 5, 0.6),
-    rgba(27, 99, 48, 0.6)
+    rgba(35, 52, 74, 0.8),
+    rgba(57, 87, 117, 0.8)
   ),
   url("assets/images/hidalgo-banner.jpg") center/cover no-repeat;
   padding: 80px 20px;
@@ -238,6 +240,7 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #FDFCFB;
 }
 
 .cta-container {
@@ -251,6 +254,7 @@ h1{
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 15px;
+  color: #D7C9B8;
 }
 
 .cta-title {
@@ -258,11 +262,12 @@ h1{
   line-height: 1.4;
   margin-bottom: 30px;
   font-weight: 600;
+  color: #FDFCFB;
 }
 
 .cta-button {
   display: inline-block;
-  background-color: #339b0a;
+  background-color: #395775;
   padding: 12px 30px;
   border-radius: 30px;
   font-size: 1.1rem;
@@ -273,11 +278,11 @@ a{
   color: #ffffff;
 }
 a:hover{
-  color: #ffff;
+  color: #ffffff;
 }
 
 .cta-button:hover {
-  background-color: #199c08;
+  background-color: #23344A;
   transform: scale(1.05);
 }
 
@@ -296,13 +301,13 @@ a:hover{
 /* ===== BLOG POSTS ===== */
 .blog-posts {
   padding: 4rem 1rem;
-  background-color: #fff;
+  background-color: #FDFCFB;
 }
 
 .blog-posts .section-title {
   text-align: center;
   font-size: 2rem;
-  color: #093b07; /* Azul principal */
+  color: #23344A;
   margin-bottom: 2.5rem;
   font-weight: 700;
 }
@@ -314,7 +319,7 @@ a:hover{
 }
 
 .post-card {
-  background: #cdd8cd;
+  background: #E4DFD7;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
@@ -323,7 +328,7 @@ a:hover{
 
 .post-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 15px rgba(35, 52, 74, 0.25);
 }
 
 .post-card img {
@@ -340,12 +345,12 @@ a:hover{
 .post-location {
   display: block;
   font-weight: 600;
-  color: #14af55; /* Verde principal */
+  color: #395775;
   margin-bottom: 0.5rem;
 }
 
 .post-content h3 {
-  color: #069901;
+  color: #23344A;
   font-size: 1.3rem;
   margin: 0.4rem 0 0.8rem;
 }
@@ -381,14 +386,14 @@ a:hover{
 
 /* ===== Reseñas ===== */
 .reviews-section {
-  background-color: #f8f8f8;
+  background-color: #F4F1EC;
   padding: 80px 20px;
   text-align: center;
 }
 
 .reviews-section h2 {
   font-size: 2.2rem;
-  color: #007f5f;
+  color: #23344A;
   margin-bottom: 40px;
 }
 
@@ -452,7 +457,7 @@ a:hover{
 .review-form-container h3 {
   text-align: center;
   margin-bottom: 20px;
-  color: #007f5f;
+  color: #395775;
 }
 
 #review-form {
@@ -474,7 +479,7 @@ a:hover{
 
 #review-form input:focus,
 #review-form textarea:focus {
-  border-color: #007f5f;
+  border-color: #395775;
   outline: none;
 }
 
@@ -501,7 +506,7 @@ a:hover{
 
 /* Botón */
 #review-form button {
-  background-color: #007f5f;
+  background-color: #395775;
   color: white;
   border: none;
   border-radius: 6px;
@@ -512,7 +517,7 @@ a:hover{
 }
 
 #review-form button:hover {
-  background-color: #005f46;
+  background-color: #23344A;
 }
 
 /* Responsivo */
@@ -522,9 +527,10 @@ a:hover{
     align-items: flex-start;
   }
 }
+
 /* ===== Footer ===== */
 .footer {
-  background: linear-gradient(135deg, #007f5f, #003f5c);
+  background: linear-gradient(135deg, #23344A, #395775);
   color: #ffffff;
   text-align: center;
   padding: 50px 20px 30px;
@@ -562,7 +568,7 @@ a:hover{
 }
 
 .social-icons li a:hover {
-  color: #00f54a;
+  color: #D7C9B8;
   transform: translateY(-3px);
 }
 

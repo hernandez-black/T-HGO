@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #1b2a49, #20304f);
-  color: #fff;
+  background: linear-gradient(135deg, #23344A, #395775);
+  color: #FDFDFE;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,11 +17,11 @@ body {
 }
 
 .registro-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
   padding: 40px 50px;
   border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px rgba(10, 17, 28, 0.6);
   max-width: 400px;
   width: 90%;
   text-align: center;
@@ -30,12 +30,12 @@ body {
 .registro-card h2 {
   margin-bottom: 10px;
   font-size: 28px;
-  color: #00bcd4;
+  color: #D7C9B8; /* acento nude */
 }
 
 .registro-card p {
   margin-bottom: 25px;
-  color: #ccc;
+  color: #E0E0E0;
 }
 
 .form-group {
@@ -45,7 +45,7 @@ body {
 
 .form-group label {
   font-size: 14px;
-  color: #ddd;
+  color: #E5E5E5;
   margin-bottom: 6px;
   display: block;
 }
@@ -56,29 +56,32 @@ body {
   border: none;
   border-radius: 10px;
   outline: none;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  color: #FDFDFE;
   font-size: 15px;
 }
 
 .form-group input::placeholder {
-  color: #bbb;
+  color: #BFC3CC;
 }
 
 .btn-submit {
   width: 100%;
-  background: #00bcd4;
-  color: #fff;
+  background: #395775;
+  color: #FDFCFB;
   font-weight: 600;
   border: none;
   border-radius: 10px;
   padding: 12px 0;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(13, 30, 52, 0.6);
 }
 
 .btn-submit:hover {
-  background: #0097a7;
+  background: #23344A;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(13, 30, 52, 0.8);
 }
 
 .volver {
@@ -86,12 +89,12 @@ body {
 }
 
 .volver a {
-  color: #bbb;
+  color: #C8C9CE;
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s ease;
 }
 
 .volver a:hover {
-  color: #00bcd4;
+  color: #D7C9B8;
 }
