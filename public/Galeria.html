@@ -13,7 +13,7 @@
 <body>
     <header class="navbar-galeria">
   <div class="logo">
-    <img src="assets/img/logo.png" alt="Logo Turismo Hidalgo">
+    <img src="../assets/Logo.jpeg" alt="Logo Turismo Hidalgo">
     <h1>Galería</h1>
   </div>
 
@@ -46,7 +46,15 @@
     </div>
   </div>
 </section>
-<div id="viewer-360" style="width: 100%; height: 500px;">Imagen</div>
+<h2 style="text-align:center; margin-top:40px;">Recorridos 360° por Hidalgo</h2>
+
+<div class="botones-360">
+  <button data-img="../assets/nueva_carpeta/Zempo360.jpg">Zempoala 360°</button>
+  <button data-img="../assets/nueva_carpeta/Real360.jpg">Real del Monte 360°</button>
+  <button data-img="../assets/nueva_carpeta/Mezti360.jpg">Metztitlán 360°</button>
+</div>
+
+<div id="viewer-360" style="width: 100%; height: 500px;"></div>
 
 <footer class="footer-galeria">
   <div class="footer-contenido">
@@ -70,9 +78,18 @@
 <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>
 
 <script>
+  // Inicializa el visor con una imagen por defecto
   const viewer = new PhotoSphereViewer.Viewer({
     container: document.getElementById('viewer-360'),
-    panorama: '../assets/nueva_carpeta/StreetView360.jpg',
+    panorama: '../assets/nueva_carpeta/Zempo360.jpg',
+  });
+
+  // Cambiar imágenes al hacer clic en botones
+  document.querySelectorAll('.botones-360 button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const nuevaImg = btn.getAttribute('data-img');
+      viewer.setPanorama(nuevaImg); // Cambia la imagen sin recargar
+    });
   });
 </script>
 
