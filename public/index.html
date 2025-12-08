@@ -38,54 +38,76 @@
         </div>
     </header>
     <section class="main-banner">
-  <div class="banner-container">
-    <button class="banner-btn prev">&#10094;</button>
+      <div class="banner-container">
+        <button class="banner-btn prev">&#10094;</button>
 
-    <div class="banner-track">
-      <div class="banner-item">
-        <img src="../assets/puebloscarousel/Real-delMonto.jpg" alt="Real del Monte">
-        <div class="banner-info">
-          <h3>Real del Monte</h3>
-          <p>Cuna del paste y de la minería</p>
+        <div class="banner-track">
+
+          <!-- Real del Monte -->
+          <div class="banner-item"
+               data-nahuatl="Magotzi"
+               data-significado="Lugar de estrechos"
+               data-historia="Real del Monte fue un centro minero destacado desde el siglo XVIII, famoso por la influencia inglesa y por la creación del paste.">
+            <img src="../assets/puebloscarousel/Real-delMonto.jpg" alt="Real del Monte">
+            <div class="banner-info">
+              <h3>Real del Monte</h3>
+              <p>Cuna del paste y de la minería</p>
+            </div>
+          </div>
+
+          <!-- Huasca -->
+          <div class="banner-item"
+               data-nahuatl="Uaxca"
+               data-significado="Lugar de ocotes"
+               data-historia="Huasca de Ocampo fue el primer Pueblo Mágico del país. Sus prismas basálticos son una maravilla natural reconocida mundialmente.">
+            <img src="../assets/puebloscarousel/Huasca.jpg" alt="Huasca de Ocampo">
+            <div class="banner-info">
+              <h3>Huasca de Ocampo</h3>
+              <p>Prismas basálticos y naturaleza</p>
+            </div>
+          </div>
+
+          <!-- Mineral del Chico -->
+          <div class="banner-item"
+               data-nahuatl="Mizquitl"
+               data-significado="Lugar de mezquites"
+               data-historia="Mineral del Chico es un pueblo minero rodeado de bosques y montañas, ideal para el ecoturismo y la aventura.">
+            <img src="../assets/puebloscarousel/Mineral-delChico.jpg" alt="Mineral del Chico">
+            <div class="banner-info">
+              <h3>Mineral del Chico</h3>
+              <p>Aventura y paisajes increíbles</p>
+            </div>
+          </div>
+
+          <!-- Huichapan -->
+          <div class="banner-item"
+               data-nahuatl="Huitzic"
+               data-significado="Lugar de colibríes"
+               data-historia="Huichapan destaca por su arquitectura colonial, su acueducto y por ser un sitio clave durante el movimiento de Independencia.">
+            <img src="../assets/puebloscarousel/Huiciapan.jpg" alt="Huichapan">
+            <div class="banner-info">
+              <h3>Huichapan</h3>
+              <p>Arquitectura colonial y tradiciones</p>
+            </div>
+          </div>
+
+          <!-- Zacualtipán -->
+          <div class="banner-item"
+               data-nahuatl="Tzacualtipan"
+               data-significado="Lugar entre templos"
+               data-historia="Zacualtipán es una región serrana rica en gastronomía, comercio y cultura otomí–tepehua.">
+            <img src="../assets/puebloscarousel/Zacualtipan.jpg" alt="Zacualtipán">
+            <div class="banner-info">
+              <h3>Zacualtipán</h3>
+              <p>Cultura y gastronomía serrana</p>
+            </div>
+          </div>
+
         </div>
-      </div>
 
-      <div class="banner-item">
-        <img src="../assets/puebloscarousel/Huasca.jpg" alt="Huasca de Ocampo">
-        <div class="banner-info">
-          <h3>Huasca de Ocampo</h3>
-          <p>Prismas basálticos y naturaleza</p>
-        </div>
+        <button class="banner-btn next">&#10095;</button>
       </div>
-
-      <div class="banner-item">
-        <img src="../assets/puebloscarousel/Mineral-delChico.jpg" alt="Mineral del Chico">
-        <div class="banner-info">
-          <h3>Mineral del Chico</h3>
-          <p>Aventura y paisajes increíbles</p>
-        </div>
-      </div>
-
-      <div class="banner-item">
-        <img src="../assets/puebloscarousel/Huiciapan.jpg" alt="Huichapan">
-        <div class="banner-info">
-          <h3>Huichapan</h3>
-          <p>Arquitectura colonial y tradiciones</p>
-        </div>
-      </div>
-
-      <div class="banner-item">
-        <img src="../assets/puebloscarousel/Zacualtipan.jpg" alt="Zacualtipán">
-        <div class="banner-info">
-          <h3>Zacualtipán</h3>
-          <p>Cultura y gastronomía serrana</p>
-        </div>
-      </div>
-    </div>
-
-    <button class="banner-btn next">&#10095;</button>
-  </div>
-</section>
+    </section>
 <section class="call-to-action">
   <div class="cta-container">
     <div class="cta-content">
@@ -221,4 +243,28 @@
     <script src="js/review.js"></script>
     <script src="../js/reseñas.js"></script>
 </body>
+<!-- ============================
+     MODAL DE INFORMACIÓN
+============================= -->
+<div class="info-modal" id="infoModal">
+  <div class="info-modal-content">
+    <span class="close-modal">&times;</span>
+
+    <img id="modalImg" src="" alt="">
+    <h2 id="modalTitle"></h2>
+    <p id="modalDesc"></p>
+
+    <h3>Nombre en náhuatl</h3>
+    <p id="modalNahuatl"></p>
+
+    <h3>Significado</h3>
+    <p id="modalSignificado"></p>
+
+    <h3>Historia breve</h3>
+    <p id="modalHistoria"></p>
+
+  </div>
+</div>
+
+
 </html>

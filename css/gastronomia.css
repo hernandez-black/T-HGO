@@ -302,6 +302,97 @@ section {
   margin-bottom: 60px;
 }
 
+/* ====== MODAL GASTRONOMÍA ====== */
+.gastro-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* Contenedor del modal */
+.gastro-modal-content {
+  background: #fff;
+  width: 90%;
+  max-width: 550px;   /* Más pequeño */
+  max-height: 85vh;   /* Evita que crezca demasiado */
+  overflow-y: auto;   /* Habilita scroll interno */
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+  animation: fadeIn .3s ease;
+  scrollbar-width: thin;
+}
+
+/* Imagen más pequeña */
+.gastro-modal-content img {
+  width: 70%;               /* Mucho más pequeña */
+  max-width: 320px;
+  display: block;
+  margin: 0 auto 15px auto;
+  border-radius: 10px;
+}
+
+/* Títulos centrados y más compactos */
+.gastro-modal-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.gastro-modal-content h4 {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.meaning {
+  font-style: italic;
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.gastro-modal-content h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+#gastroFoods li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+/* Botón cerrar */
+.gastro-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+
+
 .footer {
   background: linear-gradient(135deg, #23344a, #395775);
   box-shadow: 5px 2px 10px #23344a;
