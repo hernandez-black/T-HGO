@@ -23,15 +23,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const lugar = document.getElementById("place").value.trim();
     const comentario = document.getElementById("comment").value.trim();
 
-    if (!nombre || !lugar || !comentario || selectedRating === 0) {
-      alert("Por favor completa todos los campos y selecciona una calificación.");
+    const token = localStorage.getItem("token"); // ⬅ AGREGADO
+
+    if (!token) {
+      alert("Debes iniciar sesión para escribir una reseña.");
       return;
     }
 
     try {
       const response = await fetch(API_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "Authorization": token // ⬅ AGREGADO
+        },
         body: JSON.stringify({
           nombre,
           lugar,
@@ -43,21 +48,21 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await response.json();
 
       if (response.ok) {
-        alert("✅ Reseña enviada con éxito.");
+        alert("Reseña enviada con éxito.");
         form.reset();
         selectedRating = 0;
         document.querySelectorAll(".stars span").forEach((s) => (s.style.color = "gray"));
-        loadReviews(); // 🔁 Recargar reseñas
+        loadReviews();
       } else {
-        alert("⚠️ Error: " + data.mensaje);
+        alert("Error: " + data.mensaje);
       }
     } catch (error) {
-      console.error("❌ Error al enviar reseña:", error);
+      console.error("Error al enviar reseña:", error);
       alert("No se pudo conectar con el servidor.");
     }
   });
 
-  // 📥 Cargar reseñas existentes
+  // 📥 Cargar reseñas
   async function loadReviews() {
     try {
       const res = await fetch(API_URL);
@@ -82,13 +87,12 @@ document.addEventListener("DOMContentLoaded", () => {
           reviewsList.appendChild(div);
         });
       } else {
-        reviewsList.innerHTML = "<p>No hay reseñas aún. Sé el primero en escribir una.</p>";
+        reviewsList.innerHTML = "<p>No hay reseñas aún.</p>";
       }
     } catch (error) {
-      console.error("❌ Error al cargar reseñas:", error);
+      console.error("Error al cargar reseñas:", error);
     }
   }
 
-  // 🔄 Cargar reseñas al inicio
   loadReviews();
 });
