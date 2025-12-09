@@ -1,30 +1,28 @@
 const Contacto = require("../model/registro.model");
 
-// Controlador para crear un nuevo registro
 const crearRegistro = async (req, res) => {
   try {
-    const { nombre, email, contraseña } = req.body;
+    const { nombre, correo, password } = req.body;
 
-    // Validar campos vacíos
-    if (!nombre || !email || !contraseña) {
+    if (!nombre || !correo || !password) {
       return res.status(400).json({
         mensaje: "Todos los campos son obligatorios",
       });
     }
 
-    // Verificar si el correo ya está registrado
-    const existeUsuario = await Contacto.findOne({ email });
+    // CORRECCIÓN: Buscar por correo
+    const existeUsuario = await Contacto.findOne({ email: correo });
+
     if (existeUsuario) {
       return res.status(409).json({
         mensaje: "El correo ya está registrado",
       });
     }
 
-    // Crear el nuevo usuario
     const nuevoRegistro = new Contacto({
       nombre,
-      email,
-      contraseña,
+      email: correo,
+      contraseña: password,
     });
 
     await nuevoRegistro.save();

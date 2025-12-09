@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
@@ -6,6 +7,7 @@ const bodyParser = require("body-parser");
 const conection = require("./database/conection");
 const registroRoutes = require("./routes/registro.routes");
 const resenasRoutes = require("./routes/resenas.routes");
+const loginRoutes = require("./routes/login.routes");
 
 conection();
 const app = express();
@@ -17,7 +19,7 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.use(cors({
   origin: "*", // Permitir cualquier origen
   methods: ["GET", "POST"], // Permitir GET y POST
-  allowedHeaders: ["Content-Type"], // Permitir solo encabezados necesarios
+  allowedHeaders: ["Content-Type", "Authorization"], // Permitir solo encabezados necesarios
 }));
 
 app.use(bodyParser.json());
@@ -26,6 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 // Rutas
 app.use("/api", registroRoutes);
 app.use("/api", resenasRoutes);
+app.use("/api", loginRoutes);
 
 app.listen(PORT, () => {
   console.log(`✅ Servidor corriendo en http://localhost:${PORT}`);
