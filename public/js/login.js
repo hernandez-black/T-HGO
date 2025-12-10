@@ -1,4 +1,4 @@
-document.getElementById("registroForm").addEventListener("submit", async (e) => {
+document.getElementById("loginForm").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const email = document.getElementById("correo").value;
