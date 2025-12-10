@@ -7,6 +7,6 @@ const auth = require("../middleware/auth.middleware");
 router.get("/resenas", obtenerResenas);
 
 // 🔐 PROTEGER creación de reseñas
-router.post("/resenas", auth, crearResena);
+router.post("/resenas", crearResena);
 
 module.exports = router;
